@@ -51,28 +51,28 @@ const FeaturedFoods = () => {
                         >
                             <circle fill="currentColor" cx="44" cy="44" r="15.5" />
                             <circle
-                                fillOpacity="0.3"
+                                fillOpacity="0.2"
                                 fill="currentColor"
                                 cx="44"
                                 cy="44"
                                 r="44"
                             />
                             <circle
-                                fillOpacity="0.2"
+                                fillOpacity="0.4"
                                 fill="currentColor"
                                 cx="44"
                                 cy="44"
                                 r="37.5"
                             />
                             <circle
-                                fillOpacity="0.3"
+                                fillOpacity="0.6"
                                 fill="currentColor"
                                 cx="44"
                                 cy="44"
                                 r="29.5"
                             />
                             <circle
-                                fillOpacity="0.4"
+                                fillOpacity="0.8"
                                 fill="currentColor"
                                 cx="44"
                                 cy="44"
