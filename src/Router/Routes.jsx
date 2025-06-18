@@ -37,13 +37,13 @@ const router = createBrowserRouter([
         element: <AvailableFoods></AvailableFoods>
       },
       {
-        path: 'update-foods',
+        path: 'update-foods/:id',
         element: <UpdateFoods></UpdateFoods>
       },
       {
         path: 'food-details/:id',
         hydrateFallbackElement: <Loading></Loading>,
-        loader: ({params})=> fetch(`http://localhost:3000/all-foods/${params.id}`),
+        loader: ({params})=> fetch(`http://localhost:3000/foods/${params.id}`),
         element: <FoodDetails></FoodDetails>
       },
       {
