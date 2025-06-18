@@ -8,6 +8,8 @@ import UpdateFoods from '../Pages/Foods/UpdateFoods';
 import ManageMyFood from '../Pages/MyFoods/ManageMyFood';
 import MyFoodRequest from '../Pages/MyFoods/MyFoodRequest';
 import AvailableFoods from "../Pages/Foods/AvailableFoods";
+import FoodDetails from "../Pages/Foods/FoodDetails";
+import Loading from "../Components/Loader/Loading";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,12 @@ const router = createBrowserRouter([
       {
         path: 'update-foods',
         element: <UpdateFoods></UpdateFoods>
+      },
+      {
+        path: 'food-details/:id',
+        hydrateFallbackElement: <Loading></Loading>,
+        loader: ({params})=> fetch(`http://localhost:3000/all-foods/${params.id}`),
+        element: <FoodDetails></FoodDetails>
       },
       {
         path: 'manage-foods',
