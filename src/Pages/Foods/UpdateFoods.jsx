@@ -2,8 +2,182 @@ import React from 'react';
 
 const UpdateFoods = () => {
     return (
-        <div>
-            <h1>Update here</h1>
+        <div className="w-9/12 mx-auto p-4">
+            <form>
+                {/* Food Name */}
+                <div className="relative z-0 mb-6 w-full group">
+                    <input
+                        type="text"
+                        name="food_name"
+                        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=' '
+                        required
+                    />
+                    <label
+                        htmlFor="Food Name"
+                        className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >
+                        Food Name
+                    </label>
+                </div>
+
+                {/* Food Image */}
+                <div className="relative z-0 mb-6 w-full group">
+                    <input
+                        type="url"
+                        name="food_img"
+                        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" "
+                        required
+                    />
+                    <label
+                        htmlFor="Food Url"
+                        className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >
+                        Food Image Url
+                    </label>
+                </div>
+
+                {/* Food Quantity */}
+                <div className="relative z-0 mb-6 w-full group">
+                    <input
+                        type="password"
+                        name="quantity"
+                        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" "
+                        required
+                    />
+                    <label
+                        htmlFor="quantity"
+                        className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >
+                        Food Quantity
+                    </label>
+                </div>
+
+                {/* Pickup Location */}
+                <div className="grid xl:grid-cols-2 xl:gap-6">
+                    <div className="relative z-0 mb-6 w-full group">
+                        <input
+                            type="text"
+                            name="location"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" "
+                            required
+                        />
+                        <label
+                            htmlFor="Location"
+                            className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        >
+                            Pickup Location
+                        </label>
+                    </div>
+                    <div className="relative z-0 mb-6 w-full group">
+                        <input
+                            type="date"
+                            name="Expiry Date"
+                            id="floating_last_name"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" "
+                            required
+                        />
+                        <label
+                            htmlFor="Expiry Date"
+                            className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        >
+                            Expiry Date
+                        </label>
+                    </div>
+                </div>
+
+                {/* Additional Note */}
+                <div className="grid xl:grid-cols-2 xl:gap-6">
+                    <div className="relative z-0 mb-6 w-full group">
+                        <input
+                            type="text"
+                            name="donor_name"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" "
+                            required
+                        />
+                        <label
+                            htmlFor="donor name"
+                            className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        >
+                            Donor Name
+                        </label>
+                    </div>
+                    <div className="relative z-0 mb-6 w-full group">
+                        <input
+                            type="email"
+                            name="donor_email"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" "
+                            required
+                        />
+                        <label
+                            htmlFor="Donor Email"
+                            className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        >
+                            Donor Email
+                        </label>
+                    </div>
+                </div>
+
+                <div className="grid xl:grid-cols-2 xl:gap-6">
+                    <div className="relative z-0 mb-6 w-full group">
+                        <input
+                            type="text"
+                            name="note"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" "
+                            required
+                        />
+                        <label
+                            htmlFor="Additional Note"
+                            className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        >
+                            Additional Note
+                        </label>
+                    </div>
+                    <div className="relative z-0 mb-6 w-full group">
+                        
+                        <select placeholder=" "
+                            required className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer">
+                            <option disabled={true}>Availability</option>
+                            <option>Available</option>
+                            <option>Not Available</option>
+                        </select>
+                        <label
+                            htmlFor="Donor Email"
+                            className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        >
+                            Food Status
+                        </label>
+                    </div>
+                </div>
+
+                {/* Submit Button */}
+                <button
+                    type="submit"
+                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                    Update
+                </button>
+            </form>
+
+            <p className="mt-5 text-sm">
+                Check out the original floating label form elements on{" "}
+                <a
+                    className="text-blue-600 hover:underline"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Flowbite
+                </a>{" "}
+                and browse other similar components built with Tailwind CSS.
+            </p>
         </div>
     );
 };

@@ -13,6 +13,8 @@ export const Nav = () => {
         >My Foods</NavLink></li>
         <li><NavLink to={'/food-request'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
         >Request Foods</NavLink></li>
+        <li><NavLink to={'/available-food'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
+        >Available Foods</NavLink></li>
     </>
 
     const authLinks = <>

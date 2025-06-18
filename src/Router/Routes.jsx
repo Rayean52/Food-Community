@@ -7,6 +7,7 @@ import AddFoods from '../Pages/Foods/AddFoods';
 import UpdateFoods from '../Pages/Foods/UpdateFoods';
 import ManageMyFood from '../Pages/MyFoods/ManageMyFood';
 import MyFoodRequest from '../Pages/MyFoods/MyFoodRequest';
+import AvailableFoods from "../Pages/Foods/AvailableFoods";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: 'add-foods',
         element: <AddFoods></AddFoods>
+      },
+      {
+        path: 'available-food',
+        element: <AvailableFoods></AvailableFoods>
       },
       {
         path: 'update-foods',
