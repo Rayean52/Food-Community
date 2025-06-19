@@ -1,11 +1,43 @@
 import React, { use } from 'react';
 import { Link } from 'react-router';
+import Swal from 'sweetalert2';
 
 const FoodsTable = ({ myAddedFoodPromise }) => {
 
     const myFoods = use(myAddedFoodPromise);
 
-    console.log(myFoods)
+    const handleDelete = (id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:3000/foods/${id}`,{
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                    })
+                    .catch(error=>{
+                        console.log(error)
+                    })
+
+
+            }
+        });
+    }
 
     return (
         <div className="overflow-x-auto w-9/12 mx-auto my-18">
@@ -25,7 +57,7 @@ const FoodsTable = ({ myAddedFoodPromise }) => {
                     {
                         myFoods.map((foods, index) => <tr key={index}>
                             <th>
-                                {index+1}
+                                {index + 1}
                             </th>
                             <td>
                                 <div className="flex items-center gap-3">
@@ -47,7 +79,7 @@ const FoodsTable = ({ myAddedFoodPromise }) => {
                             </td>
                             <td>{foods.quantity}</td>
                             <th>
-                                <button className="btn btn-ghost btn-xs">Delete</button>
+                                <button onClick={()=> handleDelete(foods._id)} className="btn btn-ghost btn-xs">Delete</button>
                                 <Link className="btn btn-ghost btn-xs">Update</Link>
                             </th>
                         </tr>)

@@ -3,14 +3,15 @@ import { AuthContext } from '../../Context/AuthContext';
 import FoodsTable from './FoodsTable';
 import Loading from '../../Components/Loader/Loading';
 
-const myAddedFoodPromise = (email) =>{
-    return fetch(`http://localhost:3000/foods?=${email}`).then(res=>res.json())
-}
+const myAddedFoodPromise = (email) => {
+    return fetch(`http://localhost:3000/foods?email=${email}`).then(res => res.json());
+};
+
 
 const ManageMyFood = () => {
 
-    const {users} = use(AuthContext);
-    const email= users.email;
+    const { users } = use(AuthContext);
+    const email = users.email;
 
     return (
         <div>
