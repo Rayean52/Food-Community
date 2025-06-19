@@ -1,6 +1,7 @@
 import React, { use, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
+import toast, { Toaster } from 'react-hot-toast';
 
 const FoodDetails = () => {
 
@@ -12,6 +13,35 @@ const FoodDetails = () => {
         const today = new Date().toISOString().split("T")[0]; // format: YYYY-MM-DD
         setCurrentDate(today);
     }, []);
+
+
+    const handleSubmit = (e) => {
+
+        e.preventDefault();
+
+        const form = e.target;
+        const formData = new FormData(form);
+        const requestedData = Object.fromEntries(formData.entries());
+
+        fetch(`http://localhost:3000/requests`, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(requestedData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    document.getElementById('my_modal_4').close();
+                    toast.success('You have requested this food Successfully!');
+                }
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
 
 
     const foods = useLoaderData();
@@ -73,7 +103,7 @@ const FoodDetails = () => {
             <dialog id="my_modal_4" className="modal">
                 <div className="modal-box w-full sm:w-11/12 lg:max-w-5xl max-h-[90vh] overflow-y-auto p-8">
                     <h3 className="font-bold text-lg my-5">Request this food</h3>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         {/* Food Name */}
                         <div className="relative z-0 mb-6 w-full group">
                             <input
@@ -117,7 +147,7 @@ const FoodDetails = () => {
                             <input
                                 defaultValue={quantity}
                                 readOnly
-                                type="password"
+                                type="number"
                                 name="quantity"
                                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder=" "
@@ -155,7 +185,7 @@ const FoodDetails = () => {
                                     defaultValue={expiry_date}
                                     readOnly
                                     type="date"
-                                    name="Expiry Date"
+                                    name="expiry_date"
                                     id="floating_last_name"
                                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                     placeholder=" "
@@ -228,13 +258,13 @@ const FoodDetails = () => {
                                     defaultValue={currentDate}
                                     readOnly
                                     type="date"
-                                    name="current_date"
+                                    name="request_date"
                                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                     placeholder=" "
                                     required
                                 />
                                 <label
-                                    htmlFor="Current Date"
+                                    htmlFor="Requested Date"
                                     className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                                 >
                                     Request Date
@@ -260,7 +290,9 @@ const FoodDetails = () => {
                             </div>
                             <div className="relative z-0 mb-6 w-full group">
 
-                                <select placeholder=" "
+                                <select
+                                    name='status'
+                                    placeholder=" "
                                     required className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer">
                                     <option disabled={true}>Availability</option>
                                     <option>Available</option>
@@ -268,7 +300,7 @@ const FoodDetails = () => {
                                     <option>Requested</option>
                                 </select>
                                 <label
-                                    htmlFor="Donor Email"
+                                    htmlFor="Food Status"
                                     className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                                 >
                                     Food Status
@@ -282,17 +314,21 @@ const FoodDetails = () => {
                             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         >
                             Request
-                        </button>
-                    </form>
 
-                    {/* Modal action (close button) */}
+                        </button>
+
+                    </form>
                     <div className="modal-action">
                         <form method="dialog">
-                            <button className="btn">Close</button>
+                            <button className='btn'>Close</button>
                         </form>
                     </div>
                 </div>
             </dialog>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
         </div>
     );
 };

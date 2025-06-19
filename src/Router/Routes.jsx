@@ -10,10 +10,12 @@ import MyFoodRequest from '../Pages/MyFoods/MyFoodRequest';
 import AvailableFoods from "../Pages/Foods/AvailableFoods";
 import FoodDetails from "../Pages/Foods/FoodDetails";
 import Loading from "../Components/Loader/Loading";
+import ErrorPage from "../Components/Shared/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <ErrorPage></ErrorPage>,
     Component: RootLayout,
     children: [
       {

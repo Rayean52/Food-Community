@@ -1,6 +1,10 @@
+import { use } from "react";
+import { AuthContext } from "../../Context/AuthContext";
 
 
 const AddFoods = () => {
+
+    const {users} = use(AuthContext);
 
 
     const handleSubmit = (e) => {
@@ -94,6 +98,15 @@ const AddFoods = () => {
                                         placeholder="Donor's Email"
                                         name='donor_email'
 
+                                    />
+                                </div>
+                                <div className="flex flex-col">
+                                    <input
+                                        className="py-4 bg-white rounded-full px-6 placeholder:text-xs"
+                                        placeholder="Your Email"
+                                        defaultValue={users.email}
+                                        readOnly
+                                        name='user_email'
                                     />
                                 </div>
                                 <div className="flex flex-col">

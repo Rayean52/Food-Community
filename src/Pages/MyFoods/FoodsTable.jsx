@@ -47,6 +47,7 @@ const FoodsTable = ({ myAddedFoodPromise }) => {
                     <tr>
                         <th>No</th>
                         <th>Title</th>
+                        <th>Status</th>
                         <th>Expiry Date</th>
                         <th>Quantity</th>
                         <th>Edit</th>
@@ -73,6 +74,9 @@ const FoodsTable = ({ myAddedFoodPromise }) => {
                                         <div className="text-sm opacity-50">Location: {foods.location}</div>
                                     </div>
                                 </div>
+                            </td>
+                            <td>
+                                {foods.availability}
                             </td>
                             <td>
                                 {foods.expiry_date}
