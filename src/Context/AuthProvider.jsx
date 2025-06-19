@@ -9,7 +9,6 @@ import Loading from '../Components/Loader/Loading';
 const AuthProvider = ({ children }) => {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [userId, setUserId] = useState(null);
 
     const googleProvider = new GoogleAuthProvider();
 
@@ -34,8 +33,8 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUsers(currentUser);
-            setUserId(currentUser ? currentUser.uid : '');
             setLoading(false);
+            console.log(currentUser)
         });
 
         return () => {
@@ -46,7 +45,6 @@ const AuthProvider = ({ children }) => {
     const userInfo = {
         users,
         loading,
-        userId,
         setUsers,
         setLoading,
         signIn,

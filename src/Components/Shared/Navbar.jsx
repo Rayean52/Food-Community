@@ -1,27 +1,92 @@
-import { useState } from "react";
+import { use, useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router";
+import { AuthContext } from "../../Context/AuthContext";
 
 export const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const { users, signOutUser} = use(AuthContext);
+
+    const trigger = useRef(null);
+    const dropdown = useRef(null);
+
+    useEffect(() => {
+        const clickHandler = ({ target }) => {
+            if (!dropdown.current) return;
+            if (
+                !dropdownOpen ||
+                dropdown.current.contains(target) ||
+                trigger.current.contains(target)
+            )
+                return;
+            setDropdownOpen(false);
+        };
+        document.addEventListener("click", clickHandler);
+        return () => document.removeEventListener("click", clickHandler);
+    });
 
     const links = <>
         <li><NavLink to={'/'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
         >Home</NavLink></li>
         <li><NavLink to={'/add-foods'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
         >Add Foods</NavLink></li>
-        <li><NavLink to={'/manage-foods'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
-        >My Foods</NavLink></li>
         <li><NavLink to={'/food-request'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
         >Request Foods</NavLink></li>
         <li><NavLink to={'/available-food'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
         >Available Foods</NavLink></li>
+
+        {
+            users ? <li><NavLink to={'/manage-foods'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
+            >My Foods</NavLink></li> : ''
+        }
     </>
 
     const authLinks = <>
-        <li><NavLink to={'/sign-in'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
-        >Sign In</NavLink></li>
-        <li><NavLink to={'/sign-up'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
-        >Sign Up</NavLink></li>
+        {
+            users ? <>
+                <section className="bg-gray-2 dark:bg-dark">
+                    <div className="container">
+                        <div className="flex justify-center">
+                            <div className="relative inline-block">
+                                <button
+                                    ref={trigger}
+                                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                                    className="flex gap-2 items-center text-left"
+                                >
+                                    <span className="text-base font-medium text-dark">
+                                        {users.displayName}
+                                    </span>
+                                    <div className="relative mr-4 h-[42px] w-[42px] rounded-full">
+                                        <img
+                                            src={users.photoURL}
+                                            alt="avatar"
+                                            className="h-full w-full rounded-full object-cover object-center"
+                                        />
+                                        <span className="absolute -right-0.5 -top-0.5 block h-[14px] w-[14px] rounded-full border-[2.3px] border-white bg-[#219653] dark:border-dark"></span>
+                                    </div>
+                                </button>
+                                <div
+                                    ref={dropdown}
+                                    onFocus={() => setDropdownOpen(true)}
+                                    onBlur={() => setDropdownOpen(false)}
+                                    className={`absolute right-0 top-full z-40 w-[200px] space-y-1 rounded bg-gray-200 p-2 shadow-card dark:bg-dark-2 dark:shadow-box-dark ${dropdownOpen ? "block" : "hidden"}`}
+                                >
+                                    <button
+                                        onClick={signOutUser}
+                                        className="block w-full rounded px-3 py-2 text-left text-sm text-body-color hover:bg-gray-2 dark:text-dark-6 dark:hover:bg-dark-3"
+                                    >
+                                        Sign Out
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </> : <><li><NavLink to={'/sign-in'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
+            >Sign In</NavLink></li>
+                <li><NavLink to={'/sign-up'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
+                >Sign Up</NavLink></li></>
+        }
     </>
 
     return (
@@ -34,21 +99,7 @@ export const Nav = () => {
                         title="Company"
                         className="inline-flex items-center mr-8"
                     >
-                        <svg
-                            className="w-8 text-deep-purple-accent-400"
-                            viewBox="0 0 24 24"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeMiterlimit="10"
-                            stroke="currentColor"
-                            fill="none"
-                        >
-                            <rect x="3" y="1" width="7" height="12" />
-                            <rect x="3" y="17" width="7" height="6" />
-                            <rect x="14" y="1" width="7" height="6" />
-                            <rect x="14" y="11" width="7" height="12" />
-                        </svg>
+                        <img className="w-10" src='https://i.ibb.co/xKGK5S8w/restaurant-5651546.png' alt="" />
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                             Food Community
                         </span>
