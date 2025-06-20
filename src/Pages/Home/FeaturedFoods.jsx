@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import Loading from "../../Components/Loader/Loading";
+import { useNavigate } from "react-router";
 
 
 const FeaturedFoods = () => {
 
     const [foodsData, setFoodsData] = useState([]);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('http://localhost:3000/feature-foods')
@@ -122,10 +124,9 @@ const FeaturedFoods = () => {
 
                 </div>
                 <div className="text-center bg-indigo-50  py-5">
-                    <a
-                        href="/"
-                        aria-label=""
-                        className="inline-flex items-center font-semibold transition-colors duration-200"
+                    <button
+                        onClick={()=> navigate('/available-food')}
+                        className="inline-flex items-center font-semibold hover:cursor-pointer transition-colors duration-200"
                     >
                         See more
                         <svg
@@ -135,7 +136,7 @@ const FeaturedFoods = () => {
                         >
                             <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
                         </svg>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>

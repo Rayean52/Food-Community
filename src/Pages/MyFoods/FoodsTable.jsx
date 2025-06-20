@@ -1,8 +1,10 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 
 const FoodsTable = ({ myAddedFoodPromise }) => {
+
+    const navigate = useNavigate();
 
     const myFoods = use(myAddedFoodPromise);
 
@@ -84,7 +86,7 @@ const FoodsTable = ({ myAddedFoodPromise }) => {
                             <td>{foods.quantity}</td>
                             <th>
                                 <button onClick={()=> handleDelete(foods._id)} className="btn btn-ghost btn-xs">Delete</button>
-                                <Link className="btn btn-ghost btn-xs">Update</Link>
+                                <button onClick={()=> navigate(`/update-foods/${foods._id}`)} className="btn btn-ghost btn-xs">Update</button>
                             </th>
                         </tr>)
                     }

@@ -40,6 +40,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'update-foods/:id',
+        hydrateFallbackElement: <Loading></Loading>,
+        loader: ({params})=> fetch(`http://localhost:3000/foods/${params.id}`),
         element: <UpdateFoods></UpdateFoods>
       },
       {

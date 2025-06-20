@@ -53,7 +53,7 @@ export const Nav = () => {
                                     onClick={() => setDropdownOpen(!dropdownOpen)}
                                     className="flex gap-2 items-center text-left"
                                 >
-                                    <span className="text-base font-medium text-dark">
+                                    <span className="text-base font-medium text-white">
                                         {users.displayName}
                                     </span>
                                     <div className="relative mr-4 h-[42px] w-[42px] rounded-full">
@@ -90,7 +90,7 @@ export const Nav = () => {
     </>
 
     return (
-        <div className="px-4 pt-6 mx-auto sm:w-full md:w-full lg:max-w-screen-full md:px-24 lg:px-8">
+        <div className="px-4 bg-[url('https://i.ibb.co/XfWt1y3r/geometric-background-yellow-black.jpg')] bg-cover bg-center bg-no-repeat py-6 mx-auto sm:w-full md:w-full lg:max-w-screen-full md:px-24 lg:px-8">
             <div className="relative flex items-center justify-between">
                 <div className="flex items-center">
                     <a
@@ -101,7 +101,7 @@ export const Nav = () => {
                     >
                         <img className="w-10" src='https://i.ibb.co/xKGK5S8w/restaurant-5651546.png' alt="" />
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                            Food Community
+                            FoodHub
                         </span>
                     </a>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -160,7 +160,7 @@ export const Nav = () => {
                                                 <rect x="14" y="11" width="7" height="12" />
                                             </svg>
                                             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                Food Community
+                                                FoodHub
                                             </span>
                                         </a>
                                     </div>

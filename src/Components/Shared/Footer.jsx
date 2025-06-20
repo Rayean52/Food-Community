@@ -1,6 +1,6 @@
 export const Footer = () => {
     return (
-        <div className="px-4 pt-16 mx-auto sm:w-full md:w-full lg:max-w-screen-full md:px-24 lg:px-8">
+        <div className=" bg-[url('https://i.ibb.co/vxyxj7Lg/v915-techi-007-l.jpg')] bg-cover bg-center px-4 pt-16 mx-auto sm:w-full md:w-full lg:max-w-screen-full md:px-24 lg:px-8">
             <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
                 <div className="sm:col-span-2">
                     <a
