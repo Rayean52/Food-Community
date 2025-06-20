@@ -7,6 +7,7 @@ import Lottie from 'lottie-react';
 import lottieSignUp from '../../assets/lottie_sign_up.json'
 import { IoEyeOutline } from "react-icons/io5";
 import { FaRegEyeSlash } from "react-icons/fa6";
+import axios from 'axios';
 
 const SignUp = () => {
 
@@ -19,7 +20,7 @@ const SignUp = () => {
         setShowPassword(!showPassword);
     }
 
-    const handleSignUp = (e) => {
+    const handleSignUp = async (e) => {
         e.preventDefault();
 
         const email = e.target.email.value;
@@ -27,39 +28,44 @@ const SignUp = () => {
         const name = e.target.name.value;
         const photo = e.target.photo.value;
 
+        try {
+            const result = await signUp(email, password);
+            const user = result.user;
 
-        // const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-        // if (!passwordRegex.test(password)) {
-        //     return Swal.fire({
-        //         icon: "error",
-        //         title: "Oops...",
-        //         text: "Password must be at least 6 characters long and include both uppercase and lowercase letters.",
-        //         footer: 'An Error Occurred'
-        //     });
-
-        // }
-
-        signUp(email, password)
-            .then((result) => {
-                const user = result.user;
-                setUsers(user);
-                setLoading(false);
-                navigate(`${location.state ? location.state : '/'}`)
-
-                return updateProfile(user, {
-                    displayName: name,
-                    photoURL: photo
-                });
-            })
-            .then(() => { })
-            .catch((error) => {
-                Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: error.message,
-                    footer: 'An Error Occurred'
-                });
+            // Update profile
+            await updateProfile(user, {
+                displayName: name,
+                photoURL: photo
             });
+
+            // Firebase ID Token
+            const idToken = await user.getIdToken();
+
+            // Send token to backend to set HTTP-only cookie
+            await axios.post(
+                "http://localhost:3000/api/auth",
+                {},
+                {
+                    headers: {
+                        Authorization: `Bearer ${idToken}`,
+                    },
+                    withCredentials: true,
+                }
+            );
+
+            // Update state, navigate
+            setUsers(user);
+            setLoading(false);
+            navigate(location.state ? location.state : "/");
+
+        } catch (error) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: error.message,
+                footer: "An Error Occurred"
+            });
+        }
     };
 
 
@@ -124,7 +130,7 @@ const SignUp = () => {
                                 Create Password
                             </label>
                             <input
-                                type={showPassword? 'text' : 'password'}
+                                type={showPassword ? 'text' : 'password'}
                                 name="password"
                                 placeholder="Create password"
                                 required
@@ -134,9 +140,9 @@ const SignUp = () => {
                                 onClick={togglePassword}
                                 className="absolute right-4 bottom-0.5 transform -translate-y-1/2 cursor-pointer text-xl text-gray-600"
                             >
-                            {
-                                showPassword ? <FaRegEyeSlash></FaRegEyeSlash> : <IoEyeOutline></IoEyeOutline>
-                            }
+                                {
+                                    showPassword ? <FaRegEyeSlash></FaRegEyeSlash> : <IoEyeOutline></IoEyeOutline>
+                                }
                             </span>
                         </div>
 

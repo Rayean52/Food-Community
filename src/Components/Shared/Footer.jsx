@@ -1,6 +1,6 @@
 export const Footer = () => {
     return (
-        <div className=" bg-[url('https://i.ibb.co/My7tNQCB/01784fb2-e758-4ed7-ad0b-1bd195549471.jpg')] bg-cover bg-center bg-no-repeat px-4 pt-16 mx-auto sm:w-full md:w-full lg:max-w-screen-full md:px-24 lg:px-8">
+        <div className=" bg-[#F9F9F9] px-4 pt-16 mx-auto sm:w-full md:w-full lg:max-w-screen-full md:px-24 lg:px-8">
             <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
                 <div className="sm:col-span-2">
                     <a
