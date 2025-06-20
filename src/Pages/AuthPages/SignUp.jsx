@@ -1,16 +1,23 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { updateProfile } from 'firebase/auth';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Context/AuthContext';
 import Lottie from 'lottie-react';
 import lottieSignUp from '../../assets/lottie_sign_up.json'
+import { IoEyeOutline } from "react-icons/io5";
+import { FaRegEyeSlash } from "react-icons/fa6";
 
 const SignUp = () => {
 
     const { signUp, setUsers, googleSignIn, setLoading } = use(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    const [showPassword, setShowPassword] = useState(false);
+
+    const togglePassword = () => {
+        setShowPassword(!showPassword);
+    }
 
     const handleSignUp = (e) => {
         e.preventDefault();
@@ -75,7 +82,7 @@ const SignUp = () => {
             {/* Left Side */}
             <div className="w-full md:w-1/2 flex items-center justify-center py-12">
                 <div className="max-w-md w-full">
-                    <h2 className="text-4xl font-bold mb-6 text-gray-700">Sign Up</h2>
+                    <h2 className="text-5xl font-bold mb-6 text-gray-800">Sign Up</h2>
 
                     <form onSubmit={handleSignUp} className="space-y-3">
                         <label htmlFor="Name" className='label text-sm'>
@@ -112,18 +119,26 @@ const SignUp = () => {
                             className="w-full border border-gray-300 rounded px-4 py-2"
                         />
 
-
-                        <label htmlFor="Create Password" className='label text-sm'>
-                            Create Password
-                        </label>
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Create password"
-                            required
-                            className="w-full border border-gray-300 rounded px-4 py-2"
-                        />
-
+                        <div className='relative'>
+                            <label htmlFor="Create Password" className='label text-sm'>
+                                Create Password
+                            </label>
+                            <input
+                                type={showPassword? 'text' : 'password'}
+                                name="password"
+                                placeholder="Create password"
+                                required
+                                className="w-full border border-gray-300 rounded px-4 py-2"
+                            />
+                            <span
+                                onClick={togglePassword}
+                                className="absolute right-4 bottom-0.5 transform -translate-y-1/2 cursor-pointer text-xl text-gray-600"
+                            >
+                            {
+                                showPassword ? <FaRegEyeSlash></FaRegEyeSlash> : <IoEyeOutline></IoEyeOutline>
+                            }
+                            </span>
+                        </div>
 
 
                         <button
