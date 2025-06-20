@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Banner from './Banner';
 import FeaturedFoods from './FeaturedFoods';
 import PaidFoods from './PaidFoods';
 import States from './States';
 
 const Home = () => {
+
+    const bottomRef = useRef(null);
+
     return (
         <div>
-            <Banner></Banner>
+            <Banner bottomRef={bottomRef}></Banner>
             <FeaturedFoods></FeaturedFoods>
-            <PaidFoods></PaidFoods>
+            <PaidFoods bottomRef={bottomRef}></PaidFoods>
             <States></States>
         </div>
     );

@@ -1,21 +1,19 @@
 import React from 'react';
 
-const PaidFoods = () => {
+const PaidFoods = ({bottomRef}) => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div ref={bottomRef} className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
-                <h2 className="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group">
+                <h2 className="max-w-lg mb-5 font-sans text-5xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group">
                     <span className="inline-block mb-1 sm:mb-4">
-                        The quick, brown fox
+                        Order Delicious 
                         <br className="hidden md:block" />
-                        jumps over a lazy dog
+                         Meals Prepared Just for You...
                     </span>
                     <div className="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100" />
                 </h2>
                 <p className="text-gray-700 lg:text-sm lg:max-w-md">
-                    "Sed ut perspiciatis unde omnis iste natus error sit iste voluptatem
-                    accusantium doloremque rem aperiam, ipsa eaque quae. Sed ut
-                    perspiciatis unde omnis iste."
+                    "Explore a curated collection of paid food offerings crafted by talented home cooks and food creators in our community. Whether you're craving a hearty homemade dish or a special treat, you can place your order directly and enjoy fresh, flavorful meals delivered with care."
                 </p>
             </div>
             <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
@@ -28,7 +26,7 @@ const PaidFoods = () => {
                         />
                         <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
                             <p className="text-sm font-medium tracking-wide text-white">
-                                Sed ut perspiciatis unde omnis iste natus error
+                                A warm and comforting bowl of flavorful broth filled with tender vegetables and spices.
                             </p>
                         </div>
                     </div>
@@ -42,7 +40,7 @@ const PaidFoods = () => {
                         />
                         <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
                             <p className="text-sm font-medium tracking-wide text-white">
-                                Leverage agile frameworks to provide a robust synopsis
+                                A juicy, perfectly grilled cut of beef with a rich, savory flavor.
                             </p>
                         </div>
                     </div>
@@ -56,7 +54,7 @@ const PaidFoods = () => {
                         />
                         <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
                             <p className="text-sm font-medium tracking-wide text-white">
-                                Dingy I'm tellin' you rhubaahb Bangah Jo-Jeezly
+                                 A fresh and earthy mix of marinated mushrooms, crisp greens, and tangy dressing.
                             </p>
                         </div>
                     </div>
@@ -70,7 +68,7 @@ const PaidFoods = () => {
                         />
                         <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
                             <p className="text-sm font-medium tracking-wide text-white">
-                                Rough pomfret lemon shark plownose chimaera
+                                Tender, spiced chicken pieces grilled on skewers for a smoky, mouthwatering taste.
                             </p>
                         </div>
                     </div>
@@ -78,11 +76,10 @@ const PaidFoods = () => {
             </div>
             <div className="text-center">
                 <a
-                    href="/"
                     aria-label=""
                     className="inline-flex items-center font-semibold transition-colors duration-200"
                 >
-                    See more
+                    Order Now
                     <svg
                         className="inline-block w-3 ml-2"
                         fill="currentColor"

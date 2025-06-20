@@ -90,7 +90,7 @@ export const Nav = () => {
     </>
 
     return (
-        <div className="px-4 bg-[url('https://i.ibb.co/XfWt1y3r/geometric-background-yellow-black.jpg')] bg-cover bg-center bg-no-repeat py-6 mx-auto sm:w-full md:w-full lg:max-w-screen-full md:px-24 lg:px-8">
+        <div className="px-4 bg-[url('https://i.ibb.co/vCGyPJJ4/Untitled-design.png')] bg-cover bg-center bg-no-repeat py-6 mx-auto sm:w-full md:w-full lg:max-w-screen-full md:px-24 lg:px-8">
             <div className="relative flex items-center justify-between">
                 <div className="flex items-center">
                     <a
