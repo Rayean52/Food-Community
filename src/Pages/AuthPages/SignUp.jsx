@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import { updateProfile } from 'firebase/auth';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Context/AuthContext';
+import Lottie from 'lottie-react';
+import lottieSignUp from '../../assets/lottie_sign_up.json'
 
 const SignUp = () => {
 
@@ -69,9 +71,9 @@ const SignUp = () => {
     }
 
     return (
-        <div className="min-h-screen flex md:flex-col lg:flex-row">
+        <div className="min-h-screen w-9/12 mx-auto flex md:flex-col lg:flex-row">
             {/* Left Side */}
-            <div className="w-full md:w-1/2 flex items-center justify-center px-8 py-12">
+            <div className="w-full md:w-1/2 flex items-center justify-center py-12">
                 <div className="max-w-md w-full">
                     <h2 className="text-4xl font-bold mb-6 text-gray-700">Sign Up</h2>
 
@@ -101,6 +103,8 @@ const SignUp = () => {
                         <label htmlFor="Photo_Url" className='label text-sm'>
                             Photo Url
                         </label>
+
+
                         <input
                             type="text"
                             name="photo"
@@ -119,6 +123,7 @@ const SignUp = () => {
                             required
                             className="w-full border border-gray-300 rounded px-4 py-2"
                         />
+
 
 
                         <button
@@ -143,11 +148,7 @@ const SignUp = () => {
 
             {/* Right Side */}
             <div className="hidden lg:flex items-center">
-                <img
-                    src="https://i.ibb.co/ch7SJrK4/5243321.jpg"
-                    alt="Signup"
-                    className="max-w-lg max-h-lg rounded object-cover"
-                />
+                <Lottie animationData={lottieSignUp} style={{ width: 500, height: 850 }}></Lottie>
             </div>
         </div>
     );

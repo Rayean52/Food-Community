@@ -2,6 +2,8 @@ import { use } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Context/AuthContext';
+import Lottie from 'lottie-react';
+import lottieSignIn from '../../assets/lottie_sign_in.json'
 
 const SignIn = () => {
 
@@ -48,7 +50,7 @@ const SignIn = () => {
 
 
     return (
-        <div className="min-h-screen flex md:flex-col lg:flex-row">
+        <div className="min-h-screen w-9/12 mx-auto flex md:flex-col lg:flex-row">
             {/* Left Side */}
             <div className="w-full md:w-1/2 flex items-center justify-center px-8 py-12">
                 <div className="max-w-md w-full">
@@ -102,11 +104,7 @@ const SignIn = () => {
 
             {/* Right Side */}
             <div className="hidden lg:flex items-center">
-                <img
-                    src="https://i.ibb.co/cXMj4NKJ/5098293.jpg"
-                    alt="Signup"
-                    className="max-w-lg max-h-lg rounded object-cover"
-                />
+                <Lottie animationData={lottieSignIn} style={{ width: 450, height: 750 }}></Lottie>
             </div>
         </div>
 

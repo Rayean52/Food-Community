@@ -11,6 +11,7 @@ import AvailableFoods from "../Pages/Foods/AvailableFoods";
 import FoodDetails from "../Pages/Foods/FoodDetails";
 import Loading from "../Components/Loader/Loading";
 import ErrorPage from "../Components/Shared/ErrorPage";
+import PrivateRoute from "./PrivatesRoutes";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'add-foods',
-        element: <AddFoods></AddFoods>
+        element: <PrivateRoute><AddFoods></AddFoods></PrivateRoute>
       },
       {
         path: 'available-food',
@@ -42,21 +43,21 @@ const router = createBrowserRouter([
         path: 'update-foods/:id',
         hydrateFallbackElement: <Loading></Loading>,
         loader: ({params})=> fetch(`http://localhost:3000/foods/${params.id}`),
-        element: <UpdateFoods></UpdateFoods>
+        element: <PrivateRoute><UpdateFoods></UpdateFoods></PrivateRoute>
       },
       {
         path: 'food-details/:id',
         hydrateFallbackElement: <Loading></Loading>,
         loader: ({params})=> fetch(`http://localhost:3000/foods/${params.id}`),
-        element: <FoodDetails></FoodDetails>
+        element: <PrivateRoute><FoodDetails></FoodDetails></PrivateRoute>
       },
       {
         path: 'manage-foods',
-        element: <ManageMyFood></ManageMyFood>
+        element: <PrivateRoute><ManageMyFood></ManageMyFood></PrivateRoute>
       },
       {
         path: 'food-request',
-        element: <MyFoodRequest></MyFoodRequest>
+        element: <PrivateRoute><MyFoodRequest></MyFoodRequest></PrivateRoute>
       }
 
     ]
