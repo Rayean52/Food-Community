@@ -1,6 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 
 const PaidFoods = ({bottomRef}) => {
+
+    const navigate = useNavigate();
+
     return (
         <div ref={bottomRef} className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
@@ -75,7 +79,8 @@ const PaidFoods = ({bottomRef}) => {
                 </a>
             </div>
             <div className="text-center">
-                <a
+                <button
+                onClick={()=> navigate('/order-food')}
                     aria-label=""
                     className="inline-flex items-center font-semibold transition-colors duration-200"
                 >
@@ -87,7 +92,7 @@ const PaidFoods = ({bottomRef}) => {
                     >
                         <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
                     </svg>
-                </a>
+                </button>
             </div>
         </div>
     );
