@@ -58,11 +58,11 @@ const SignIn = () => {
 
 
     return (
-        <div className="min-h-screen w-9/12 mx-auto flex md:flex-col lg:flex-row">
+        <div className="min-h-screen w-11/12 sm:w-10/12 md:w-9/12 mx-auto flex flex-col lg:flex-row">
             {/* Left Side */}
-            <div className="w-full md:w-1/2 flex items-center justify-center px-8 py-12">
+            <div className="w-full lg:w-1/2 flex items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12">
                 <div className="max-w-md w-full">
-                    <h2 className="text-5xl font-bold mb-6 text-gray-800">Sign In</h2>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-800">Sign In</h2>
 
                     <form onSubmit={handleSignIn} className="space-y-3">
 
@@ -76,7 +76,6 @@ const SignIn = () => {
                             required
                             className="w-full border border-gray-300 rounded px-4 py-2"
                         />
-
 
                         <div className='relative'>
                             <label htmlFor="Password" className='label text-sm'>
@@ -93,9 +92,7 @@ const SignIn = () => {
                                 onClick={togglePassword}
                                 className='absolute right-4 bottom-0.5 transform -translate-y-1/2 cursor-pointer text-xl text-gray-600'
                             >
-                                {
-                                    showPassword ? <FaRegEyeSlash></FaRegEyeSlash> : <IoEyeOutline></IoEyeOutline>
-                                }
+                                {showPassword ? <FaRegEyeSlash /> : <IoEyeOutline />}
                             </span>
                         </div>
 
@@ -114,15 +111,15 @@ const SignIn = () => {
                     </form>
 
                     <p className="text-center mt-4">
-                        First time exploring? Then join with us! {<Link to={'/sign-up'} className='text-blue-600 underline font-bold'>Sign Up</Link>}
+                        First time exploring? Then join with us!{' '}
+                        <Link to={'/sign-up'} className='text-blue-600 underline font-bold'>Sign Up</Link>
                     </p>
                 </div>
-
             </div>
 
             {/* Right Side */}
-            <div className="hidden lg:flex items-center">
-                <Lottie animationData={lottieSignIn} style={{ width: 450, height: 750 }}></Lottie>
+            <div className="hidden lg:flex items-center justify-center lg:pl-8">
+                <Lottie animationData={lottieSignIn} style={{ width: '100%', maxWidth: 450, height: 750 }} />
             </div>
         </div>
 

@@ -18,8 +18,6 @@ const MyFoodRequest = () => {
         })
     },[users?.email])
 
-    console.log(requestedFood)
-
     return (
         <div>
             <div className="overflow-x-auto w-9/12 mx-auto my-18">

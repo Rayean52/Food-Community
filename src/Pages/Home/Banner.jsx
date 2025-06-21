@@ -13,9 +13,9 @@ const Banner = ({bottomRef}) => {
         <div className="py-13 bg-[url('https://i.ibb.co/r2dTsqxC/rm141-nunny-02b.jpg')] bg-cover bg-center bg-no-repeat min-h-screen">
             <div className="relative w-10/12 mx-auto overflow-hidden flex items-center">
                 {/* Yellow shape background */}
-                <div className="absolute top-0 right-0 w-[52%] h-full bg-gradient-to-t from-amber-400 to-amber-500 rounded-br-[5rem] rounded-tl-[5rem] z-0"></div>
+                <div className="absolute top-0 right-0 hidden lg:flex md:w-[52%] h-full bg-gradient-to-t from-amber-400 to-amber-500 rounded-br-[5rem] rounded-tl-[5rem] z-0"></div>
 
-                <div className="container mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+                <div className="container mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
                     {/* Left side content */}
                     <div className="text-center md:text-left space-y-6">
                         <h1 className="text-4xl md:text-5xl font-bold leading-tight">

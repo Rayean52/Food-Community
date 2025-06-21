@@ -10,18 +10,16 @@ export const Footer = () => {
                         className="inline-flex items-center"
                     >
                         <img className="w-10" src="https://i.ibb.co/xKGK5S8w/restaurant-5651546.png" alt="" />
-                        <span className="ml-2 text-xl font-bold tracking-wide  uppercase">
+                        <span className="ml-2 text-2xl font-bold tracking-wide">
                             FoodHub
                         </span>
                     </a>
                     <div className="mt-6 lg:max-w-sm">
                         <p className="text-sm ">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque laudantium, totam rem aperiam.
+                            Join the FoodHub community—discover quick links, connect with us on social media, and stay in the loop with the freshest updates and offers.
                         </p>
-                        <p className="mt-4 text-sm ">
-                            Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                            beatae vitae dicta sunt explicabo.
+                        <p className="text-sm ">
+                            © Copyright 2025 FoodHub. All rights reserved.
                         </p>
                     </div>
                 </div>
@@ -30,13 +28,13 @@ export const Footer = () => {
                         Contacts
                     </p>
                     <div className="flex">
-                        <p className="mr-1 ">Phone: 850-123-5021</p>
+                        <p className="mr-1 ">Phone: +8801773805152</p>
                     </div>
                     <div className="flex">
-                        <p className="mr-1 ">Email: info@lorem.mail</p>
+                        <p className="mr-1 ">Email: food@hub.gmail.com</p>
                     </div>
                     <div className="flex">
-                        <p className="mr-1 ">Address: 312 Lovely Street, NY</p>
+                        <p className="mr-1 ">Address: Uttara Sector-4, Dhaka</p>
                     </div>
                 </div>
                 <div>
@@ -71,42 +69,9 @@ export const Footer = () => {
                         </a>
                     </div>
                     <p className="mt-4 text-sm ">
-                        Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
-                        spare ribs salami.
+                        Follow us on social media for the latest updates and news.
                     </p>
                 </div>
-            </div>
-            <hr className="border border-t-white"/>
-            <div className="flex flex-col-reverse justify-between pt-5 pb-10 lg:flex-row">
-                <p className="text-sm ">
-                    © Copyright 2020 Lorem Inc. All rights reserved.
-                </p>
-                <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-                    <li>
-                        <a
-                            href="/"
-                            className="text-sm  transition-colors duration-300 "
-                        >
-                            F.A.Q
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            className="text-sm  transition-colors duration-300 "
-                        >
-                            Privacy Policy
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            className="text-sm  transition-colors duration-300 "
-                        >
-                            Terms &amp; Conditions
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
     );

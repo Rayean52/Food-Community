@@ -39,7 +39,7 @@ const UpdateFoods = () => {
                         defaultValue={food_name}
                         type="text"
                         name="food_name"
-                        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=' '
                         required
                     />
@@ -57,7 +57,7 @@ const UpdateFoods = () => {
                         defaultValue={food_img}
                         type="url"
                         name="food_img"
-                        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" "
                         required
                     />
@@ -75,7 +75,7 @@ const UpdateFoods = () => {
                         defaultValue={quantity}
                         type="number"
                         name="quantity"
-                        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" "
                         required
                     />
@@ -94,7 +94,7 @@ const UpdateFoods = () => {
                             defaultValue={location}
                             type="text"
                             name="location"
-                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" "
                             required
                         />
@@ -110,7 +110,7 @@ const UpdateFoods = () => {
                             defaultValue={expiry_date}
                             type="date"
                             name="expiry_date"
-                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" "
                             required
                         />
@@ -130,7 +130,7 @@ const UpdateFoods = () => {
                             defaultValue={donor_name}
                             type="text"
                             name="donor_name"
-                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" "
                             required
                         />
@@ -146,7 +146,7 @@ const UpdateFoods = () => {
                             defaultValue={donor_email}
                             type="email"
                             name="donor_email"
-                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" "
                             required
                         />
@@ -165,7 +165,7 @@ const UpdateFoods = () => {
                             defaultValue={notes}
                             type="text"
                             name="note"
-                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" "
                             required
                         />
@@ -182,7 +182,7 @@ const UpdateFoods = () => {
                             defaultValue={availability}
                             name='status'
                             placeholder=" "
-                            required className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer">
+                            required className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-blue-600 peer">
                             <option disabled={true}>Availability</option>
                             <option>Available</option>
                             <option>Not Available</option>
@@ -200,24 +200,11 @@ const UpdateFoods = () => {
                 {/* Submit Button */}
                 <button
                     type="submit"
-                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className=" bg-amber-500 hover:bg-amber-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
                 >
                     Update
                 </button>
             </form>
-
-            <p className="mt-5 text-sm">
-                Check out the original floating label form elements on{" "}
-                <a
-                    className="text-blue-600 hover:underline"
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Flowbite
-                </a>{" "}
-                and browse other similar components built with Tailwind CSS.
-            </p>
         </div>
     );
 };
