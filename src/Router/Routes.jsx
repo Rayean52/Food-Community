@@ -43,13 +43,13 @@ const router = createBrowserRouter([
       {
         path: 'update-foods/:id',
         hydrateFallbackElement: <Loading></Loading>,
-        loader: ({params})=> fetch(`http://localhost:3000/foods/${params.id}`),
+        loader: ({params})=> fetch(`https://food-share-server-5lo9nkaxg-abdullah-rayeans-projects.vercel.app/foods/${params.id}`),
         element: <PrivateRoute><UpdateFoods></UpdateFoods></PrivateRoute>
       },
       {
         path: 'food-details/:id',
         hydrateFallbackElement: <Loading></Loading>,
-        loader: ({params})=> fetch(`http://localhost:3000/foods/${params.id}`),
+        loader: ({params})=> fetch(`https://food-share-server-5lo9nkaxg-abdullah-rayeans-projects.vercel.app/foods/${params.id}`),
         element: <PrivateRoute><FoodDetails></FoodDetails></PrivateRoute>
       },
       {

@@ -19,7 +19,7 @@ const FoodsTable = ({ myAddedFoodPromise }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/foods/${id}`,{
+                fetch(`https://food-share-server-5lo9nkaxg-abdullah-rayeans-projects.vercel.app/foods/${id}`,{
                     method: "DELETE"
                 })
                     .then(res => res.json())

@@ -34,6 +34,8 @@ export const Nav = () => {
         >Request Foods</NavLink></li>
         <li><NavLink to={'/available-food'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
         >Available Foods</NavLink></li>
+        <li><NavLink to={'/order-food'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
+        >Order Food</NavLink></li>
 
         {
             users ? <li><NavLink to={'/manage-foods'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
@@ -53,7 +55,7 @@ export const Nav = () => {
                                     onClick={() => setDropdownOpen(!dropdownOpen)}
                                     className="flex gap-2 items-center text-left"
                                 >
-                                    <span className="text-base font-medium text-white">
+                                    <span className="text-base font-medium lg:text-white">
                                         {users.displayName}
                                     </span>
                                     <div className="relative mr-4 h-[42px] w-[42px] rounded-full">
@@ -73,7 +75,7 @@ export const Nav = () => {
                                 >
                                     <button
                                         onClick={signOutUser}
-                                        className="block w-full rounded px-3 py-2 text-left text-sm text-body-color hover:bg-gray-2 dark:text-dark-6 dark:hover:bg-dark-3"
+                                        className="block w-full rounded px-3 py-2 text-left text-sm text-body-color hover:bg-gray-2"
                                     >
                                         Sign Out
                                     </button>
@@ -82,9 +84,9 @@ export const Nav = () => {
                         </div>
                     </div>
                 </section>
-            </> : <><li><NavLink to={'/sign-in'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
+            </> : <><li><NavLink to={'/sign-in'} className="font-medium tracking-wide lg:text-white transition-colors duration-200"
             >Sign In</NavLink></li>
-                <li><NavLink to={'/sign-up'} className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
+                <li><NavLink to={'/sign-up'} className="font-medium tracking-wide lg:text-white transition-colors duration-200"
                 >Sign Up</NavLink></li></>
         }
     </>

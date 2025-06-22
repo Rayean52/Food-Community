@@ -20,6 +20,8 @@ const SignUp = () => {
         setShowPassword(!showPassword);
     }
 
+
+
     const handleSignUp = async (e) => {
         e.preventDefault();
 
@@ -27,6 +29,17 @@ const SignUp = () => {
         const password = e.target.password.value;
         const name = e.target.name.value;
         const photo = e.target.photo.value;
+
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+        if (!passwordRegex.test(password)) {
+            return Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Password must be at least 6 characters long and include both uppercase and lowercase letters.",
+                footer: 'An Error Occurred'
+            });
+
+        }
 
         try {
             const result = await signUp(email, password);
@@ -43,7 +56,7 @@ const SignUp = () => {
 
             // Send token to backend to set HTTP-only cookie
             await axios.post(
-                "http://localhost:3000/api/auth",
+                "https://food-share-server-5lo9nkaxg-abdullah-rayeans-projects.vercel.app/api/auth",
                 {},
                 {
                     headers: {
@@ -82,6 +95,8 @@ const SignUp = () => {
             });
         })
     }
+
+
 
     return (
         <div className="min-h-screen w-11/12 sm:w-10/12 md:w-9/12 mx-auto flex flex-col lg:flex-row">

@@ -23,7 +23,7 @@ const FoodDetails = () => {
         const formData = new FormData(form);
         const requestedData = Object.fromEntries(formData.entries());
 
-        fetch(`http://localhost:3000/requests`, {
+        fetch(`https://food-share-server-5lo9nkaxg-abdullah-rayeans-projects.vercel.app/requests`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -41,7 +41,6 @@ const FoodDetails = () => {
                 console.log(error)
             })
     }
-
 
 
     const foods = useLoaderData();
