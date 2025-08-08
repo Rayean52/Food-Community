@@ -1,3 +1,5 @@
+<img src='https://i.ibb.co.com/FkNVnLhw/Screenshot-14.png' alt='landing page'>
+
 Welcome To FoodHub!
 
 # 🍽️ FoodHub - Community Food Sharing Platform
