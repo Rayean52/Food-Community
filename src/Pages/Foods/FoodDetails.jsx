@@ -23,7 +23,7 @@ const FoodDetails = () => {
         const formData = new FormData(form);
         const requestedData = Object.fromEntries(formData.entries());
 
-        fetch(`https://food-share-server-5lo9nkaxg-abdullah-rayeans-projects.vercel.app/requests`, {
+        fetch(`https://foodhub-community.vercel.app/requests`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"

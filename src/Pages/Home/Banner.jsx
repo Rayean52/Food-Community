@@ -10,25 +10,26 @@ const Banner = ({bottomRef}) => {
 
 
     return (
-        <div className="py-13 bg-[url('https://i.ibb.co/r2dTsqxC/rm141-nunny-02b.jpg')] bg-cover bg-center bg-no-repeat min-h-screen">
+        <div className="py-13 bg-[#C2FFC7] min-h-screen">
             <div className="relative w-10/12 mx-auto overflow-hidden flex items-center">
                 {/* Yellow shape background */}
-                <div className="absolute top-0 right-0 hidden lg:flex md:w-[52%] h-full bg-gradient-to-t from-amber-400 to-amber-500 rounded-br-[5rem] rounded-tl-[5rem] z-0"></div>
 
                 <div className="container mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+
                     {/* Left side content */}
-                    <div className="text-center md:text-left space-y-6">
+                    <div className="text-left space-y-6">
+                        <img src="leaf.png" className='w-30' alt="" />
                         <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                            Where Foodies Unite – Share, <span className='text-amber-500'>Discover</span> & Savor Together
+                            Where Foodies Unite – Share, <span className='text-[#399918]'>Discover</span> & Savor Together
                         </h1>
-                        <p className="text-gray-600 max-w-md mx-auto md:mx-0">
+                        <p className="text-gray-600 max-w-md md:mx-0">
                             Join a vibrant food community built for passionate eaters and home chefs. Explore mouthwatering recipes, request meals, and connect with food lovers from all around. Your next favorite dish starts here.
                         </p>
-                        <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                            <button onClick={() => navigate('/available-food')} className="btn bg-amber-500 px-6 rounded-full hover:bg-amber-600 hover:text-white">
+                        <div className="flex flex-wrap justify-start gap-4">
+                            <button onClick={() => navigate('/available-food')} className="btn bg-[#399918] px-6 rounded-full hover:bg-black hover:text-white">
                                 Available Foods
                             </button>
-                            <button onClick={handleClick} className="btn btn-outline rounded-full">Paid Foods</button>
+                            <button onClick={handleClick} className="btn btn-outline rounded-full hover:bg-[#399918]">Paid Foods</button>
                         </div>
                     </div>
 

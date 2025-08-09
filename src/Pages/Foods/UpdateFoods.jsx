@@ -13,7 +13,7 @@ const UpdateFoods = () => {
         const formData = new FormData(form);
         const updatedData = Object.fromEntries(formData.entries());
 
-        fetch(`https://food-share-server-5lo9nkaxg-abdullah-rayeans-projects.vercel.app/foods/${_id}`, {
+        fetch(`https://foodhub-community.vercel.app/foods/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

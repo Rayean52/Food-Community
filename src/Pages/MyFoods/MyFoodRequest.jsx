@@ -9,8 +9,8 @@ const MyFoodRequest = () => {
     const [requestedFood, setRequestedFood] = useState([]);
 
     useEffect(()=>{
-        fetch(`https://food-share-server-5lo9nkaxg-abdullah-rayeans-projects.vercel.app/requested-foods?email=${users.email}`,{
-            credentials: 'include'
+        fetch(`https://foodhub-community.vercel.app/requested-foods?email=${users.email}`,{
+            credentials: "include"
         })
         .then(res => res.json())
         .then(data=> {

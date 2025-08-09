@@ -10,7 +10,7 @@ const FeaturedFoods = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://food-share-server-5lo9nkaxg-abdullah-rayeans-projects.vercel.app/feature-foods')
+        fetch('https://foodhub-community.vercel.app/feature-foods')
             .then(res => res.json())
             .then(data => {
                 setFoodsData(data)

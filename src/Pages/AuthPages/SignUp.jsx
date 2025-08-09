@@ -56,7 +56,7 @@ const SignUp = () => {
 
             // Send token to backend to set HTTP-only cookie
             await axios.post(
-                "https://food-share-server-5lo9nkaxg-abdullah-rayeans-projects.vercel.app/api/auth",
+                "https://foodhub-community.vercel.app/api/auth",
                 {},
                 {
                     headers: {

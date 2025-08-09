@@ -4,8 +4,8 @@ import FoodsTable from './FoodsTable';
 import Loading from '../../Components/Loader/Loading';
 
 const myAddedFoodPromise = (email) => {
-    return fetch(`https://food-share-server-5lo9nkaxg-abdullah-rayeans-projects.vercel.app/foods?email=${email}`,{
-        credentials: 'include'
+    return fetch(`https://foodhub-community.vercel.app/foods?email=${email}`,{
+        credentials: "include"
     }).then(res => res.json());
 };
 
