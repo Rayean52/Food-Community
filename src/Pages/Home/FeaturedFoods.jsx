@@ -43,24 +43,37 @@ const FeaturedFoods = () => {
                     <div className="absolute inset-x-0 top-0 items-center justify-center hidden overflow-hidden md:flex md:inset-y-0">
                         
                     </div>
-                    <div className="relative grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="relative grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 
 
                         {
-                            foodsData.map((food) => <div key={food._id} className="flex flex-col justify-between bg-[#A8CD89] overflow-hidden text-left transition-shadow duration-200 rounded shadow-xl group hover:shadow-2xl">
-                                <div className="p-5">
-                                    <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
-                                        <img src="https://i.ibb.co/ZCxTFqT/food.png" alt="" />
+                            foodsData.map((food) => <div
+                                key={food._id}
+                                className="bg-[#A8CD89] rounded-2xl shadow-lg p-5 w-64 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-xl"
+                            >
+                                {/* Image */}
+                                <div className="flex justify-center">
+                                    <div className="w-28 h-28 rounded-full border-4 border-[#399918] overflow-hidden">
+                                        <img
+                                            src={food.food_img}
+                                            alt={food.food_name}
+                                            className="w-full h-full object-cover"
+                                        />
                                     </div>
-                                    <p className="mb-2 font-bold">{food.food_name}</p>
-                                    <p className="text-sm leading-5 text-gray-900">{food.notes}</p>
                                 </div>
-                                <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+
+                                {/* Title */}
+                                <h3 className="mt-4 text-lg font-semibold text-gray-800">
+                                    {food.food_name}
+                                </h3>
+
+                                {/* Description */}
+                                <p className="mt-1 text-sm text-gray-600 line-clamp-2">
+                                    {food.notes}
+                                </p>
+
                             </div>)
                         }
-
-
-
                     </div>
 
                 </div>
