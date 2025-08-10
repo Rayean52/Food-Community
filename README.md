@@ -1,8 +1,12 @@
+<img src='https://i.ibb.co.com/FkNVnLhw/Screenshot-14.png' alt='landing page'>
+
 Welcome To FoodHub!
 
 # 🍽️ FoodHub - Community Food Sharing Platform
 
 **FoodHub** is a community-driven platform designed to connect food donors, receivers, and enthusiasts. Whether you're donating surplus food, searching for a meal, or exploring new dishes, FoodHub creates a seamless bridge between generosity and need.
+<br>
+Live demo: https://food-community-52.web.app/
 
 ## 🌟 Features
 

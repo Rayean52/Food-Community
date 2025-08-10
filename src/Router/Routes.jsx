@@ -13,6 +13,7 @@ import Loading from "../Components/Loader/Loading";
 import ErrorPage from "../Components/Shared/ErrorPage";
 import PrivateRoute from "./PrivatesRoutes";
 import OrderFood from "../Pages/Foods/OrderFood";
+import AboutUs from "../Pages/Home/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: 'available-food',
         element: <AvailableFoods></AvailableFoods>
+      },
+      {
+        path: 'about-us',
+        element: <AboutUs></AboutUs>
       },
       {
         path: 'update-foods/:id',

@@ -10,7 +10,7 @@ const Banner = ({bottomRef}) => {
 
 
     return (
-        <div className="py-13 bg-[#C2FFC7] min-h-screen">
+        <div className="py-13 bg-[#A8CD89] min-h-screen">
             <div className="relative w-10/12 mx-auto overflow-hidden flex items-center">
                 {/* Yellow shape background */}
 
@@ -26,7 +26,7 @@ const Banner = ({bottomRef}) => {
                             Join a vibrant food community built for passionate eaters and home chefs. Explore mouthwatering recipes, request meals, and connect with food lovers from all around. Your next favorite dish starts here.
                         </p>
                         <div className="flex flex-wrap justify-start gap-4">
-                            <button onClick={() => navigate('/available-food')} className="btn bg-[#399918] px-6 rounded-full hover:bg-black hover:text-white">
+                            <button onClick={() => navigate('/available-food')} className="btn bg-[#399918] px-6 rounded-full hover:bg-green-600">
                                 Available Foods
                             </button>
                             <button onClick={handleClick} className="btn btn-outline rounded-full hover:bg-[#399918]">Paid Foods</button>
