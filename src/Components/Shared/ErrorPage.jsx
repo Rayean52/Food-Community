@@ -3,15 +3,32 @@ import { Link } from 'react-router';
 
 const ErrorPage = () => {
     return (
-        <div className='flex flex-col w-11/12 sm:w-10/12 md:w-8/12 lg:w-6/12 mx-auto justify-center items-center min-h-screen space-y-5 text-center px-4'>
-            <h1 className='text-2xl text-gray-700 sm:text-3xl font-semibold'>Page Not Found</h1>
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4 text-center">
+            {/* Page Title */}
+            <h1 className="text-4xl sm:text-5xl font-bold text-[#399918] mb-3">
+                404 - Page Not Found
+            </h1>
+
+            {/* Description */}
+            <p className="text-gray-600 text-base sm:text-lg max-w-lg mb-6">
+                Oops! It looks like the page you’re trying to visit doesn’t exist.
+                Maybe you mistyped the URL or the page has been moved.
+                Let’s get you back to something tasty!
+            </p>
+
+            {/* Image */}
             <img
-                className='rounded w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg'
-                src="https://i.ibb.co/jPC6nVV1/oops-404-error-with-broken-robot-concept-illustration-114360-5529.jpg"
-                alt=""
+                className="rounded-lg w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg shadow-md mb-6"
+                src="https://i.ibb.co.com/m5S71d8D/pasted-image-0-2023-12-21-T171213-083.png"
+                alt="404 Not Found"
             />
-            <Link to={'/'} className='btn btn-primary text-sm sm:text-base'>
-                Back To Home
+
+            {/* Back to Home Button */}
+            <Link
+                to="/"
+                className="btn btn-primary text-black bg-[#399918] text-sm sm:text-base px-6 py-2 rounded-full shadow hover:scale-105 transition-transform duration-300"
+            >
+                🍽 Back to Home
             </Link>
         </div>
     );

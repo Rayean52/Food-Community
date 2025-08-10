@@ -30,7 +30,7 @@ export const Nav = () => {
         >Home</NavLink></li>
         <li><NavLink to={'/available-food'} className="font-medium tracking-wide text-gray-200 transition-colors duration-200"
         >Available Foods</NavLink></li>
-        <li><NavLink to={'/about-us'} className="font-medium tracking-wide text-gray-200 transition-colors duration-200"
+        <li><NavLink to={'about-u'} className="font-medium tracking-wide text-gray-200 transition-colors duration-200"
         >About Us</NavLink></li>
         
 
