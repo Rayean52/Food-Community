@@ -28,7 +28,7 @@ const AvailableFoods = () => {
     );
 
     return (
-        <div className="px-4 py-12 sm:py-16 mx-auto w-11/12 sm:max-w-xl md:max-w-full lg:max-w-screen-xl sm:px-6 md:px-24 lg:px-8 lg:py-20">
+        <div className="px-4 mt-25 py-12 sm:py-16 mx-auto w-11/12 sm:max-w-xl md:max-w-full lg:max-w-screen-xl sm:px-6 md:px-24 lg:px-8 lg:py-20">
             <div className="flex flex-col gap-6 md:gap-10 mb-6 md:mb-10 lg:justify-between lg:flex-row">
                 <div className="w-full lg:w-1/2">
                     <h2 className="max-w-lg mb-4 font-sans text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 group leading-tight">
