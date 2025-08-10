@@ -1,4 +1,4 @@
-<img src='https://i.ibb.co.com/FkNVnLhw/Screenshot-14.png' alt='landing page'>
+<img src='https://i.ibb.co.com/FLFbpLtW/Screenshot-25.png' alt='landing page'>
 
 Welcome To FoodHub!
 
