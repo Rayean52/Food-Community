@@ -26,23 +26,23 @@ export const Nav = () => {
     });
 
     const links = <>
-        <li><NavLink to={'/'} className="font-medium tracking-wide text-gray-900 transition-colors duration-200"
+        <li><NavLink to={'/'} className="font-medium tracking-wide text-gray-200 transition-colors duration-200"
         >Home</NavLink></li>
-        <li><NavLink to={'/available-food'} className="font-medium tracking-wide text-gray-900 transition-colors duration-200"
+        <li><NavLink to={'/available-food'} className="font-medium tracking-wide text-gray-200 transition-colors duration-200"
         >Available Foods</NavLink></li>
-        <li><NavLink to={'/about-us'} className="font-medium tracking-wide text-gray-900 transition-colors duration-200"
+        <li><NavLink to={'/about-us'} className="font-medium tracking-wide text-gray-200 transition-colors duration-200"
         >About Us</NavLink></li>
         
 
         {
             users ?
                 <>
-                    <li><NavLink to={'/manage-foods'} className="font-medium tracking-wide text-gray-900 transition-colors duration-200">My Foods</NavLink></li>
-                    <li><NavLink to={'/add-foods'} className="font-medium tracking-wide text-gray-900 transition-colors duration-200"
+                    <li><NavLink to={'/manage-foods'} className="font-medium tracking-wide text-gray-200 transition-colors duration-200">My Foods</NavLink></li>
+                    <li><NavLink to={'/add-foods'} className="font-medium tracking-wide text-gray-200 transition-colors duration-200"
                     >Add Foods</NavLink></li>
-                    <li><NavLink to={'/food-request'} className="font-medium tracking-wide text-gray-900 transition-colors duration-200"
+                    <li><NavLink to={'/food-request'} className="font-medium tracking-wide text-gray-200 transition-colors duration-200"
                     >Request Foods</NavLink></li>
-                    <li><NavLink to={'/order-food'} className="font-medium tracking-wide text-gray-900 transition-colors duration-200"
+                    <li><NavLink to={'/order-food'} className="font-medium tracking-wide text-gray-200 transition-colors duration-200"
                     >Order Food</NavLink></li>
                 </>
                 : ''
@@ -98,7 +98,7 @@ export const Nav = () => {
     </>
 
     return (
-        <div className="fixed top-0 left-0 w-full z-50 bg-[#399918] shadow-lg">
+        <div className="fixed bg-gray-900 top-0 left-0 w-full z-50 shadow-lg">
             <div className="px-4 py-6 w-10/12 mx-auto sm:w-full md:w-full lg:max-w-screen-full md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between">
                     <div className="flex items-center">
@@ -109,11 +109,11 @@ export const Nav = () => {
                             className="inline-flex items-center mr-8"
                         >
                             <img
-                                className="w-10"
-                                src="https://i.ibb.co/xKGK5S8w/restaurant-5651546.png"
+                                className="w-14"
+                                src="https://i.ibb.co.com/MDxtjYCf/leaf-16205239-removebg-preview.png"
                                 alt=""
                             />
-                            <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                            <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                                 FoodHub
                             </span>
                         </a>
@@ -162,7 +162,7 @@ export const Nav = () => {
                                                     src="https://i.ibb.co/xKGK5S8w/restaurant-5651546.png"
                                                     alt=""
                                                 />
-                                                <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                                                <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                                                     FoodHub
                                                 </span>
                                             </a>
