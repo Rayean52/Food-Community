@@ -47,58 +47,64 @@ const FoodDetails = () => {
     const { food_name, food_img, quantity, expiry_date, location, availability, notes, donor_name, donor_email } = foods;
 
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
-                <div className="relative lg:w-1/2">
+        <div className="px-4 mt-20 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+
+            {/* Page Title & Description */}
+            <div className="text-center mb-12">
+                <h1 className="text-3xl sm:text-4xl font-bold text-gray-800">
+                    🍽 <span className='text-[#399918]'>Food Details</span>
+                </h1>
+                <p className="text-gray-600 mt-3 max-w-xl mx-auto text-sm sm:text-base">
+                    View full details of the selected food item, including donor information,
+                    availability, and pickup location. You can request this food directly using the form below.
+                </p>
+            </div>
+
+            <div className="flex flex-col lg:flex-row bg-white border rounded-lg shadow-lg overflow-hidden">
+
+                {/* Left Image Section */}
+                <div className="lg:w-1/2 relative">
                     <img
                         src={food_img}
-                        alt=""
-                        className="object-cover w-full lg:absolute h-full lg:h-full"
+                        alt={food_name}
+                        className="object-cover w-full h-full"
                     />
                     <svg
                         className="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
                         viewBox="0 0 20 104"
                         fill="currentColor"
                     >
-                        <polygon points="17.3036738 5.68434189e-14 20 5.68434189e-14 20 104 0.824555778 104" />
+                        <polygon points="17.3036738 0 20 0 20 104 0.824555778 104" />
                     </svg>
                 </div>
-                <div className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
 
-                    <h5 className="mb-3 text-3xl font-extrabold leading-none sm:text-4xl">
-                        {food_name}
-                    </h5>
-                    <p className="mb-5 text-gray-800">
-                        Expiry Date: {expiry_date}
-                    </p>
-                    <p className="mb-5 text-gray-800">
-                        Location: {location}
-                    </p>
-                    <p className="mb-5 text-gray-800">
-                        Quantity: {quantity}
-                    </p>
-                    <p className="mb-5 text-gray-800">
-                        Availability: {availability}
-                    </p>
-                    <p className="mb-5 text-gray-800">
-                        Donor Name : {donor_name}
-                    </p>
-                    <p className="mb-5 text-gray-800">
-                        Donor Email : {donor_email}
-                    </p>
-                    <p className="mb-5 text-gray-800">
-                        Donor's Comment : {notes}
-                    </p>
+                {/* Right Details Section */}
+                <div className="flex flex-col justify-center p-8 lg:p-16 lg:w-1/2 space-y-3">
+
+                    <h2 className="text-3xl font-bold text-gray-800">{food_name}</h2>
+
+                    <div className="grid sm:grid-cols-2 gap-4 mt-4">
+                        <p className="text-gray-700"><span className="font-semibold">Expiry Date:</span> {expiry_date}</p>
+                        <p className="text-gray-700"><span className="font-semibold">Location:</span> {location}</p>
+                        <p className="text-gray-700"><span className="font-semibold">Quantity:</span> {quantity}</p>
+                        <p className="text-gray-700"><span className="font-semibold">Availability:</span> {availability}</p>
+                        <p className="text-gray-700"><span className="font-semibold">Donor Name:</span> {donor_name}</p>
+                        <p className="text-gray-700"><span className="font-semibold">Donor Email:</span> {donor_email}</p>
+                        <p className="text-gray-700 sm:col-span-2">
+                            <span className="font-semibold">Donor's Comment:</span> {notes}
+                        </p>
+                    </div>
+
                     <button
-                        className="btn bg-amber-500"
+                        className="btn bg-[#399918] mt-6"
                         onClick={() => document.getElementById('my_modal_4').showModal()}
                     >
                         Request Food
                     </button>
-
                 </div>
-
             </div>
+
+            {/* Request Food Modal */}
             <dialog id="my_modal_4" className="modal">
                 <div className="modal-box w-full sm:w-11/12 lg:max-w-5xl max-h-[90vh] overflow-y-auto p-8">
                     <h3 className="font-bold text-lg my-5">Request this food</h3>
@@ -310,7 +316,7 @@ const FoodDetails = () => {
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            className="text-white bg-amber-500 hover:bg-amber-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+                            className="text-white bg-[#399918] hover:bg-green-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
                         >
                             Request
 
@@ -324,11 +330,9 @@ const FoodDetails = () => {
                     </div>
                 </div>
             </dialog>
-            <Toaster
-                position="top-center"
-                reverseOrder={false}
-            />
+            <Toaster position="top-center" reverseOrder={false} />
         </div>
+
     );
 };
 

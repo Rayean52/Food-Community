@@ -41,7 +41,7 @@ const Banner = ({bottomRef}) => {
                             <div>
                                 <img
                                     className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-                                    src="https://i.ibb.co/NgvVRBNp/front-view-tasty-meat-soup-with-potatoes-greens-dark-desk-meal-meat-dish-sauce.jpg"
+                                    src="https://i.ibb.co.com/W4976rkR/Meat.jpg"
                                     alt=""
                                 />
 
@@ -49,7 +49,7 @@ const Banner = ({bottomRef}) => {
                             <div>
                                 <img
                                     className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-                                    src="https://i.ibb.co/p6pZXJYJ/fried-chicken-with-vegetables-herbs-aluminum-skillet.jpg"
+                                    src="https://i.ibb.co.com/s9TP4dGh/burger.jpg"
                                     alt=""
                                 />
 
@@ -57,7 +57,7 @@ const Banner = ({bottomRef}) => {
                             <div>
                                 <img
                                     className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-                                    src="https://i.ibb.co/0yDs2pLR/mixed-fried-meat-with-pomegranate-sauce.jpg"
+                                    src="https://i.ibb.co.com/x925DmN/mixed.jpg"
                                     alt=""
                                 />
 
@@ -65,7 +65,7 @@ const Banner = ({bottomRef}) => {
                             <div>
                                 <img
                                     className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-                                    src="https://i.ibb.co/NgPv8dNg/delicious-indian-food-tray.jpg"
+                                    src="https://i.ibb.co.com/HDQJYWsh/delicious.jpg"
                                     alt=""
                                 />
 

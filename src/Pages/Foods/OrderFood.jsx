@@ -72,7 +72,7 @@ const OrderFood = () => {
     };
 
     return (
-        <div className="max-w-6xl  mx-auto px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+        <div className="max-w-6xl mt-25 mx-auto px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
             <h1 className='text-center text-4xl font-semibold my-10'>Order Whatever you want.</h1>
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
                 {cards.map((card, index) => (
