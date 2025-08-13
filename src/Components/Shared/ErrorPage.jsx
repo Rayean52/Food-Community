@@ -5,7 +5,7 @@ const ErrorPage = () => {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4 text-center">
             {/* Page Title */}
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#399918] mb-3">
+            <h1 className="text-4xl sm:text-5xl font-bold text-[#398747] mb-3">
                 404 - Page Not Found
             </h1>
 

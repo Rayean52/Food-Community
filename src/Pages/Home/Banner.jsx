@@ -10,69 +10,43 @@ const Banner = ({bottomRef}) => {
 
 
     return (
-        <div className="py-13 bg-[#A8CD89] min-h-screen">
+        <div className="py-13 mt-25 bg-[#A8CD89] min-h-screen">
             <div className="relative w-10/12 mx-auto overflow-hidden flex items-center">
-                {/* Yellow shape background */}
-
                 <div className="container mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
 
                     {/* Left side content */}
                     <div className="text-left space-y-6">
-                        <img src="leaf.png" className='w-30' alt="" />
+                        <img src="leaf.png" className="w-30" alt="" />
                         <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                            Where Foodies Unite – Share, <span className='text-[#399918]'>Discover</span> & Savor Together
+                            Where Foodies Unite – Share, <span className="text-[#398747]">Discover</span> & Savor Together
                         </h1>
                         <p className="text-gray-600 max-w-md md:mx-0">
                             Join a vibrant food community built for passionate eaters and home chefs. Explore mouthwatering recipes, request meals, and connect with food lovers from all around. Your next favorite dish starts here.
                         </p>
                         <div className="flex flex-wrap justify-start gap-4">
-                            <button onClick={() => navigate('/available-food')} className="btn bg-[#399918] px-6 rounded-full hover:bg-green-600">
+                            <button
+                                onClick={() => navigate('/available-food')}
+                                className="btn bg-[#398747] px-6 rounded-full hover:bg-[#276634]"
+                            >
                                 Available Foods
                             </button>
-                            <button onClick={handleClick} className="btn btn-outline rounded-full hover:bg-[#399918]">Paid Foods</button>
+                            <button
+                                onClick={handleClick}
+                                className="btn btn-outline rounded-full hover:bg-[#276634]"
+                            >
+                                Paid Foods
+                            </button>
                         </div>
                     </div>
 
-
-                    {/* Right side image */}
-                    <div className="flex justify-center items-center relative p-15">
-                        <div className="grid gap-8 row-gap-5 mb-8 lg:grid-cols-2 lg:row-gap-8">
-
-                            <div>
-                                <img
-                                    className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-                                    src="https://i.ibb.co.com/W4976rkR/Meat.jpg"
-                                    alt=""
-                                />
-
-                            </div>
-                            <div>
-                                <img
-                                    className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-                                    src="https://i.ibb.co.com/s9TP4dGh/burger.jpg"
-                                    alt=""
-                                />
-
-                            </div>
-                            <div>
-                                <img
-                                    className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-                                    src="https://i.ibb.co.com/x925DmN/mixed.jpg"
-                                    alt=""
-                                />
-
-                            </div>
-                            <div>
-                                <img
-                                    className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-                                    src="https://i.ibb.co.com/HDQJYWsh/delicious.jpg"
-                                    alt=""
-                                />
-
-                            </div>
-                        </div>
+                    {/* Right side full-width image */}
+                    <div className="flex justify-center items-center">
+                        <img
+                            src="https://i.ibb.co.com/3ykxxDd8/Chat-GPT-Image-Aug-13-2025-12-22-27-PM-Picsart-Background-Remover.png"
+                            alt="Hero Food"
+                            className="w-full h-fullobject-cover"
+                        />
                     </div>
-
                 </div>
 
                 {/* Dinner Time Bottom Right */}
@@ -80,9 +54,10 @@ const Banner = ({bottomRef}) => {
                     <h3 className="text-lg font-semibold">Get fresh foods</h3>
                     <p className="text-sm text-gray-600">24 Hours</p>
                 </div>
-
             </div>
         </div>
+
+
     );
 };
 

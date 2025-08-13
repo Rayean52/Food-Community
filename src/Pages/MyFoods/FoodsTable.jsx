@@ -48,7 +48,7 @@ const FoodsTable = ({ myAddedFoodPromise }) => {
                 {/* Title & Description */}
                 <div className="text-center mb-10">
                     <h1 className="text-3xl sm:text-4xl font-bold text-gray-800">
-                        🍲 <span className='text-[#399918]'>My Added Foods</span>
+                        🍲 <span className='text-[#398747]'>My Added Foods</span>
                     </h1>
                     <p className="text-gray-600 mt-3 max-w-xl mx-auto text-sm sm:text-base">
                         Manage all the food items you’ve contributed to our community.

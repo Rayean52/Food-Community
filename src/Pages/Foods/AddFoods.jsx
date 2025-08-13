@@ -147,7 +147,7 @@ const AddFoods = () => {
                                     <input
                                         type="submit"
                                         value="Add"
-                                        className="rounded-full bg-[#399918] font-bold py-4 px-6 min-w-40 hover:bg-green-500 transition-all"
+                                        className="rounded-full bg-[#399918] font-bold py-4 px-6 min-w-40 hover:text-[#398747] transition-all"
                                     />
                                 </div>
                             </form>

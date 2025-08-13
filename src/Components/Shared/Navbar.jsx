@@ -98,7 +98,7 @@ export const Nav = () => {
     </>
 
     return (
-        <div className="fixed bg-gray-900 top-0 left-0 w-full z-50 shadow-lg">
+        <div className="fixed bg-[#003300] top-0 left-0 w-full z-50 shadow-lg">
             <div className="px-4 py-6 w-10/12 mx-auto sm:w-full md:w-full lg:max-w-screen-full md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between">
                     <div className="flex items-center">

@@ -52,7 +52,7 @@ const FoodDetails = () => {
             {/* Page Title & Description */}
             <div className="text-center mb-12">
                 <h1 className="text-3xl sm:text-4xl font-bold text-gray-800">
-                    🍽 <span className='text-[#399918]'>Food Details</span>
+                    🍽 <span className='text-[#398747]'>Food Details</span>
                 </h1>
                 <p className="text-gray-600 mt-3 max-w-xl mx-auto text-sm sm:text-base">
                     View full details of the selected food item, including donor information,
@@ -316,7 +316,7 @@ const FoodDetails = () => {
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            className="text-white bg-[#399918] hover:bg-green-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+                            className="text-white bg-[#399918] hover:text-[#398747] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
                         >
                             Request
 

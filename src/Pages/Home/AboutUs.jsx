@@ -5,7 +5,7 @@ const AboutUs = () => {
             <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-                        <span className="text-[#399918] "> About Our Food Community</span>
+                        <span className="text-[#398747] "> About Our Food Community</span>
                     </h1>
                     <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
                         Bringing together generous donors and grateful recipients, our mission is to reduce food waste
@@ -27,7 +27,7 @@ const AboutUs = () => {
                     {/* Right: Text */}
                     <div>
                         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                            <span className="text-[#399918] "> Who We Are</span>
+                            <span className="text-[#398747] "> Who We Are</span>
                         </h2>
                         <p className="text-gray-700 mb-4">
                             FoodShare is a community-driven platform that connects people who have surplus food
@@ -35,7 +35,7 @@ const AboutUs = () => {
                             one meal at a time.
                         </p>
                         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                            <span className="text-[#399918] "> Our Mission</span>
+                            <span className="text-[#398747] "> Our Mission</span>
                         </h2>
                         <p className="text-gray-700">
                             We believe that no food should go to waste and no person should go hungry. Through
